@@ -303,12 +303,12 @@
 
         layer_Base {
             bindings = <
-&kp F1                    &kp F2       &kp F3       &kp F4      &kp F5                                                                                                      &kp F6      &kp F7          &kp F8         &kp F9          &kp F10
-&kp EQUAL                 &kp N1       &kp N2       &kp N3      &kp N4      &kp N5                                                                                  &kp N6  &kp N7      &kp N8          &kp N9         &kp N0          &kp MINUS
-&kp TAB                   &kp Q        &kp W        &kp E       &kp R       &kp T                                                                                   &kp Y   &kp U       &kp I           &kp O          &kp P           &kp BSLH
-&mt LC(LS(LA(LGUI))) ESC  &kp A        &kp S        &kp D       &kp F       &kp G                                                                                   &kp H   &kp J       &kp K           &kp L          &kp SEMI        &kp SQT
-&kp GRAVE                 &mt LSHFT Z  &mt LCTRL X  &mt LALT C  &mt LGUI V  &kp B   &kp TAB   &kp LGUI  &lower    &kp PAGE_UP    &kp RGUI  &sticky_shift_caps_word  &kp N   &mt RGUI M  &mt RALT COMMA  &mt RCTRL DOT  &mt RSHFT FSLH  &kp RET
-&magic LAYER_Magic 0      &kp HOME     &kp END      &kp LEFT    &kp RIGHT           &kp BSPC  &kp DEL   &kp C_PP  &kp PAGE_DOWN  &kp RET   &kp SPACE                        &kp DOWN    &kp UP          &kp LBKT       &kp RBKT        &magic LAYER_Magic 0
+&kp F1                    &kp F2       &kp F3       &kp F4      &kp F5                                                                                                      &kp F6      &kp F7             &kp F8             &kp F9             &kp F10
+&kp EQUAL                 &kp N1       &kp N2       &kp N3      &kp N4      &kp N5                                                                                  &kp N6  &kp N7      &mt RS(RG(N8)) N8  &mt RS(RG(N9)) N9  &mt RS(RG(N0)) N0  &kp MINUS
+&kp TAB                   &kp Q        &kp W        &kp E       &kp R       &kp T                                                                                   &kp Y   &kp U       &kp I              &kp O              &kp P              &kp BSLH
+&mt LC(LS(LA(LGUI))) ESC  &kp A        &kp S        &kp D       &kp F       &kp G                                                                                   &kp H   &kp J       &kp K              &kp L              &kp SEMI           &kp SQT
+&kp GRAVE                 &mt LSHFT Z  &mt LCTRL X  &mt LALT C  &mt LGUI V  &kp B   &kp TAB   &kp LGUI  &lower    &kp PAGE_UP    &kp RGUI  &sticky_shift_caps_word  &kp N   &mt RGUI M  &mt RALT COMMA     &mt RCTRL DOT      &mt RSHFT FSLH     &kp RET
+&magic LAYER_Magic 0      &kp HOME     &kp END      &kp LEFT    &kp RIGHT           &kp BSPC  &kp DEL   &kp C_PP  &kp PAGE_DOWN  &kp RET   &kp SPACE                        &kp DOWN    &kp UP             &kp LBKT           &kp RBKT           &magic LAYER_Magic 0
             >;
         };
 
