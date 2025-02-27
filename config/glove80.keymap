@@ -188,7 +188,13 @@
             label = "STICKY_SHIFT_CAPS_WORD";
             #binding-cells = <0>;
             bindings = <&sk RSHFT>, <&caps_word>;
-        };
+        };pgdown_layer1: pgdown_layer1 {
+      compatible = "zmk,behavior-hold-tap";
+    
+         label = "PGDOWN_LAYER1";
+         bindings = <&lt>, <&kp>;
+         #binding-cells = <2>;
+         tapping-term-ms = <280>;};
     };
 };
 
@@ -303,13 +309,13 @@
 
         layer_Base {
             bindings = <
-&kp F1                    &kp F2       &kp F3       &kp F4      &kp F5                                                                                                      &kp F6      &kp F7             &kp F8             &kp F9             &kp F10
-&kp EQUAL                 &kp N1       &kp N2       &kp N3      &kp N4      &kp N5                                                                                  &kp N6  &kp N7      &mt RS(RG(N8)) N8  &mt RS(RG(N9)) N9  &mt RS(RG(N0)) N0  &kp MINUS
-&kp TAB                   &kp Q        &kp W        &kp E       &kp R       &kp T                                                                                   &kp Y   &kp U       &kp I              &kp O              &kp P              &kp BSLH
-&mt LC(LS(LA(LGUI))) ESC  &kp A        &kp S        &kp D       &kp F       &kp G                                                                                   &kp H   &kp J       &kp K              &kp L              &kp SEMI           &kp SQT
-&kp GRAVE                 &mt LSHFT Z  &mt LCTRL X  &mt LALT C  &mt LGUI V  &kp B   &kp TAB   &kp LGUI  &lower    &kp PAGE_UP    &kp RGUI  &sticky_shift_caps_word  &kp N   &mt RGUI M  &mt RALT COMMA     &mt RCTRL DOT      &mt RSHFT FSLH     &kp RET
-&magic LAYER_Magic 0      &kp HOME     &kp END      &kp LEFT    &kp RIGHT           &kp BSPC  &kp DEL   &kp C_PP  &kp PAGE_DOWN  &kp RET   &kp SPACE                        &kp DOWN    &kp UP             &kp LBKT           &kp RBKT           &magic LAYER_Magic 0
-            >;
+&kp F1                    &kp F2       &kp F3       &kp F4      &kp F5                                                                                                                      &kp F6      &kp F7             &kp F8             &kp F9             &kp F10
+&kp EQUAL                 &kp N1       &kp N2       &kp N3      &kp N4      &kp N5                                                                                                  &kp N6  &kp N7      &mt RS(RG(N8)) N8  &mt RS(RG(N9)) N9  &mt RS(RG(N0)) N0  &kp MINUS
+&kp TAB                   &kp Q        &kp W        &kp E       &kp R       &kp T                                                                                                   &kp Y   &kp U       &kp I              &kp O              &kp P              &kp BSLH
+&mt LC(LS(LA(LGUI))) ESC  &kp A        &kp S        &kp D       &kp F       &kp G                                                                                                   &kp H   &kp J       &kp K              &kp L              &kp SEMI           &kp SQT
+&kp GRAVE                 &mt LSHFT Z  &mt LCTRL X  &mt LALT C  &mt LGUI V  &kp B   &kp TAB   &kp LGUI  &lower    &kp PAGE_UP                 &key_repeat  &sticky_shift_caps_word  &kp N   &mt RGUI M  &mt RALT COMMA     &mt RCTRL DOT      &mt RSHFT FSLH     &key_repeat
+&magic LAYER_Magic 0      &kp HOME     &kp END      &kp LEFT    &kp RIGHT           &kp BSPC  &kp DEL   &kp C_PP  &pgdown_layer1 1 PAGE_DOWN  &kp RET      &kp SPACE                        &kp DOWN    &kp UP             &kp LBKT           &kp RBKT           &magic LAYER_Magic 0
+>;
         };
 
         layer_Lower {
@@ -320,7 +326,7 @@
 &trans                &none         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_UP                                                  &kp PERCENT            &kp KP_N4   &kp KP_N5     &kp KP_N6     &kp KP_PLUS      &none
 &trans                &kp K_APP     &none           &kp F11         &kp F12          &kp PG_DN  &trans  &trans  &to 0   &trans  &trans  &trans  &kp COMMA              &kp KP_N1   &kp KP_N2     &kp KP_N3     &kp KP_ENTER     &trans
 &magic LAYER_Magic 0  &kp CAPS      &kp INS         &kp F11         &kp F12                     &trans  &trans  &trans  &trans  &trans  &trans                         &kp KP_N0   &kp KP_N0     &kp KP_DOT    &kp KP_ENTER     &trans
-            >;
+>;
         };
 
         layer_Magic {
@@ -331,7 +337,7 @@
 &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                   &none  &none  &none  &none  &none  &bootloader
 &sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none         &none  &none  &none  &none  &none  &none  &none  &none  &sys_reset
 &none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB  &none  &none  &none         &none  &none  &none  &none  &to 3
-            >;
+>;
         };
 
         layer_Factory {
@@ -342,7 +348,7 @@
 &kp NUMBER_3  &kp NUMBER_9  &kp NUMBER_5  &kp NUMBER_1  &kp NUMBER_7  &kp NUMBER_2                                                                                      &kp NUMBER_2  &kp NUMBER_7  &kp NUMBER_1  &kp NUMBER_5  &kp NUMBER_9  &kp NUMBER_3
 &kp NUMBER_4  &kp NUMBER_0  &kp NUMBER_6  &kp NUMBER_2  &kp NUMBER_8  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_6  &kp NUMBER_5  &kp NUMBER_4  &kp NUMBER_3  &kp NUMBER_8  &kp NUMBER_2  &kp NUMBER_6  &kp NUMBER_0  &kp NUMBER_4
 &kp NUMBER_5  &kp NUMBER_1  &kp NUMBER_7  &kp NUMBER_3  &kp NUMBER_9                &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_9  &kp NUMBER_8  &kp NUMBER_7                &kp NUMBER_9  &kp NUMBER_3  &kp NUMBER_7  &kp NUMBER_1  &kp NUMBER_5
-            >;
+>;
         };
     };
 };
