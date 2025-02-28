@@ -42,6 +42,8 @@
     require-prior-idle-ms = <150>;
 };
 
+&caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE MINUS>; };
+
 /* Glove80 system behavior & macros */
 
 / {
