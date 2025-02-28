@@ -351,12 +351,12 @@
 >;
         };layer_4 {
          bindings = <
-&trans  &trans        &trans        &trans        &trans                                                                                      &trans        &trans        &trans        &trans         &trans
-&trans  &trans        &trans        &trans        &trans        &trans                                                         &trans         &trans        &trans        &trans        &trans         &trans
-&trans  &kp LS(EXCL)  &kp LC(N2)    &kp LC(N3)    &kp LS(DLLR)  &kp LS(PRCNT)                                                  &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)   &trans
-&trans  &kp MINUS     &kp LS(LBRC)  &kp LS(LPAR)  &kp LBKT      &trans                                                         &trans         &kp RBKT      &kp LS(RPAR)  &kp LS(RBRC)  &kp LS(UNDER)  &trans
-&trans  &kp EQUAL     &trans        &kp FSLH      &kp GRAVE     &trans         &trans  &trans  &to 0   &to 0   &trans  &trans  &trans         &kp GRAVE     &kp BSLH      &trans        &trans         &trans
-&trans  &trans        &trans        &trans        &trans                       &trans  &trans  &trans  &trans  &trans  &trans                 &trans        &trans        &trans        &trans         &trans
+&trans  &trans        &trans        &trans         &trans                                                                                      &trans        &trans        &trans        &trans         &trans
+&trans  &trans        &trans        &trans         &trans        &trans                                                         &trans         &trans        &trans        &trans        &trans         &trans
+&trans  &kp LS(EXCL)  &kp LS(AT)    &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)                                                  &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)   &trans
+&trans  &kp MINUS     &kp LS(LBRC)  &kp LS(LPAR)   &kp LBKT      &trans                                                         &trans         &kp RBKT      &kp LS(RPAR)  &kp LS(RBRC)  &kp LS(UNDER)  &trans
+&trans  &kp EQUAL     &trans        &kp FSLH       &kp GRAVE     &trans         &trans  &trans  &to 0   &to 0   &trans  &trans  &trans         &kp GRAVE     &kp BSLH      &trans        &trans         &trans
+&trans  &trans        &trans        &trans         &trans                       &trans  &trans  &trans  &trans  &trans  &trans                 &trans        &trans        &trans        &trans         &trans
 >;};
     };
 };
