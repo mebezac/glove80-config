@@ -179,7 +179,22 @@
              compatible = "zmk,behavior-macro";
              #binding-cells = <0>;
              bindings = <&kp LPAR &kp RPAR &kp LEFT_ARROW>;
-             label = "FULL_PARENTHESES";};
+             label = "FULL_PARENTHESES";};full_square_bracket: full_square_bracket {
+        compatible = "zmk,behavior-macro";
+      
+         #binding-cells = <0>;
+         bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT_ARROW>;
+         label = "FULL_SQUARE_BRACKET";};full_curly_bracket: full_curly_bracket {
+        compatible = "zmk,behavior-macro";
+      
+         #binding-cells = <0>;
+         bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT_ARROW>;
+         label = "FULL_CURLY_BRACKET";};full_backtick: full_backtick {
+        compatible = "zmk,behavior-macro";
+      
+         #binding-cells = <0>;
+         bindings = <&kp GRAVE &kp GRAVE &kp LEFT_ARROW>;
+         label = "FULL_BACKTICK";};
         };
   };
 
@@ -362,12 +377,12 @@
 >;
         };ProgrammingLayer {
          bindings = <
-&trans  &trans        &trans        &trans             &trans                                                                                      &trans        &trans        &trans        &trans         &trans
-&trans  &trans        &trans        &trans             &trans        &trans                                                         &trans         &trans        &trans        &trans        &trans         &trans
-&trans  &kp LS(EXCL)  &kp LS(AT)    &kp LS(POUND)      &kp LS(DLLR)  &kp LS(PRCNT)                                                  &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)   &trans
-&trans  &kp MINUS     &kp LS(LBRC)  &full_parentheses  &kp LBKT      &trans                                                         &trans         &kp RBKT      &kp LS(RPAR)  &kp LS(RBRC)  &kp LS(UNDER)  &trans
-&trans  &kp EQUAL     &trans        &kp FSLH           &kp GRAVE     &trans         &trans  &trans  &to 0   &to 0   &trans  &trans  &trans         &kp GRAVE     &kp BSLH      &trans        &trans         &trans
-&trans  &trans        &trans        &trans             &trans                       &trans  &trans  &trans  &trans  &trans  &trans                 &trans        &trans        &trans        &trans         &trans
+&trans  &trans        &trans               &trans             &trans                                                                                              &trans                &trans             &trans               &trans         &trans
+&trans  &trans        &trans               &trans             &trans                &trans                                                         &trans         &trans                &trans             &trans               &trans         &trans
+&trans  &kp LS(EXCL)  &kp LS(AT)           &kp LS(POUND)      &kp LS(DLLR)          &kp LS(PRCNT)                                                  &kp LS(CARET)  &kp LS(AMPS)          &kp LS(STAR)       &kp LS(LPAR)         &kp LS(RPAR)   &trans
+&trans  &kp MINUS     &full_curly_bracket  &full_parentheses  &full_square_bracket  &trans                                                         &trans         &full_square_bracket  &full_parentheses  &full_curly_bracket  &kp LS(UNDER)  &trans
+&trans  &kp EQUAL     &trans               &kp FSLH           &full_backtick        &trans         &trans  &trans  &to 0   &to 0   &trans  &trans  &trans         &full_backtick        &kp BSLH           &trans               &trans         &trans
+&trans  &trans        &trans               &trans             &trans                               &trans  &trans  &trans  &trans  &trans  &trans                 &trans                &trans             &trans               &trans         &trans
 >;};
     };
 };
