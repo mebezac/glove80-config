@@ -168,16 +168,20 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&out OUT_BLE &bt BT_SEL 3>;
-        };full_parentheses: full_parentheses {
-        compatible = "zmk,behavior-macro";
-      
-         #binding-cells = <0>;
-         bindings = <&kp LPAR &kp RPAR &kp LEFT_ARROW>;
-         label = "FULL_PARENTHESES";};
-    };
-
+        };
     #endif
+    
 };
+
+/ { 
+    macros {
+        full_parentheses: full_parentheses {
+             compatible = "zmk,behavior-macro";
+             #binding-cells = <0>;
+             bindings = <&kp LPAR &kp RPAR &kp LEFT_ARROW>;
+             label = "FULL_PARENTHESES";};
+        };
+  };
 
 / {
     behaviors {
